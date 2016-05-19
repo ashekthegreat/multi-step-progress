@@ -1,0 +1,40 @@
+.multi-step-progress .progress-strip {
+  height: 25px;
+  background: #f2f2f2;
+  border: 1px solid #f2f2f2;
+  color: #515151;
+  font-size: 11px;
+  position: relative;
+}
+.multi-step-progress .progress-strip .progress-bg,
+.multi-step-progress .progress-strip .progress-status,
+.multi-step-progress .progress-strip .progress-label {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  line-height: 23px;
+}
+.multi-step-progress .progress-strip .progress-bg {
+  left: 0;
+  background: #9acc99;
+}
+.multi-step-progress .progress-strip .progress-label {
+  left: 8px;
+}
+.multi-step-progress .progress-strip .progress-status {
+  right: 8px;
+}
+.multi-step-progress .progress-strip + .progress-strip {
+  margin-top: 6px;
+}
+.multi-step-progress .progress-strip.in-progress {
+  background: #dff0e0;
+  border-color: #dff0e0;
+}
+.multi-step-progress .progress-strip.done {
+  color: #fff;
+  border-color: #9acc99;
+}
+.multi-step-progress .progress-strip.done .progress-bg {
+  background: #9acc99;
+}
