@@ -16,6 +16,7 @@
 <body ng-controller="MainController">
     <div class="container">
         <h1>Multi step progress</h1>
+        <p>One directive to rule them all!</p>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -27,36 +28,36 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>Lorem ipsum</td>
-                    <td>Lorem ipsum doler sit amet</td>
-                    <td><div multi-step-progress steps="steps" progress-values="progressValues1"></div></td>
+                    <td>1 Step</td>
+                    <td>It works with 1 step</td>
+                    <td><div multi-step-progress steps="steps1" progress-values="progressValues1"></div></td>
                     <td><button class="btn btn-primary" ng-click="start(progressValues1)">Start</button></td>
                 </tr>
                 <tr>
-                    <td>Lorem ipsum</td>
-                    <td>Lorem ipsum doler sit amet</td>
+                    <td>2 Steps</td>
+                    <td>It works with 2 steps too</td>
                     <td>
-                        <div multi-step-progress steps="steps" progress-values="progressValues2"></div>
+                        <div multi-step-progress steps="steps2" progress-values="progressValues2"></div>
                     </td>
                     <td>
                         <button class="btn btn-primary" ng-click="start(progressValues2)">Start</button>
                     </td>
                 </tr>
                 <tr>
-                    <td>Lorem ipsum</td>
-                    <td>Lorem ipsum doler sit amet</td>
+                    <td>3 Steps</td>
+                    <td>3 is even better!</td>
                     <td>
-                        <div multi-step-progress steps="steps" progress-values="progressValues3"></div>
+                        <div multi-step-progress steps="steps3" progress-values="progressValues3"></div>
                     </td>
                     <td>
                         <button class="btn btn-primary" ng-click="start(progressValues3)">Start</button>
                     </td>
                 </tr>
                 <tr>
-                    <td>Lorem ipsum</td>
-                    <td>Lorem ipsum doler sit amet</td>
+                    <td>3 Steps</td>
+                    <td>Another example of 3 steps</td>
                     <td>
-                        <div multi-step-progress steps="steps" progress-values="progressValues4"></div>
+                        <div multi-step-progress steps="steps3" progress-values="progressValues4"></div>
                     </td>
                     <td>
                         <button class="btn btn-primary" ng-click="start(progressValues4)">Start</button>

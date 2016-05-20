@@ -1,7 +1,26 @@
 (function () {
     angular.module('app', ['ui.multiStepProgress'])
         .controller("MainController", function ($scope, $interval) {
-            $scope.steps = [
+            $scope.steps1 = [
+                {
+                    waitingText: 'File load',
+                    inProgressText: 'Loading file ...',
+                    doneText: 'File loaded'
+                }
+            ];
+            $scope.steps2 = [
+                {
+                    waitingText: 'File load',
+                    inProgressText: 'Loading file ...',
+                    doneText: 'File loaded'
+                },
+                {
+                    waitingText: 'Validation',
+                    inProgressText: 'Validating data ...',
+                    doneText: 'Data validated'
+                }
+            ];
+            $scope.steps3 = [
                 {
                     waitingText: 'File load',
                     inProgressText: 'Loading file ...',
@@ -18,8 +37,8 @@
                     doneText: 'Data synchronized'
                 }
             ];
-            $scope.progressValues1 = [0, 0, 0];
-            $scope.progressValues2 = [0, 0, 0];
+            $scope.progressValues1 = [0];
+            $scope.progressValues2 = [0, 0];
             $scope.progressValues3 = [0, 0, 0];
             $scope.progressValues4 = [0, 0, 0];
 
