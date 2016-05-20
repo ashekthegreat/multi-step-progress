@@ -16,15 +16,54 @@
 <body ng-controller="MainController">
     <div class="container">
         <h1>Multi step progress</h1>
-        <div class="row">
-            <div class="col-sm-8">
-                <div multi-step-progress steps="steps" progress-values="progressValues"></div>
-            </div>
-            <div class="col-sm-8">
-
-            </div>
-
-        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Progress</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Lorem ipsum</td>
+                    <td>Lorem ipsum doler sit amet</td>
+                    <td><div multi-step-progress steps="steps" progress-values="progressValues1"></div></td>
+                    <td><button class="btn btn-primary" ng-click="start(progressValues1)">Start</button></td>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum</td>
+                    <td>Lorem ipsum doler sit amet</td>
+                    <td>
+                        <div multi-step-progress steps="steps" progress-values="progressValues2"></div>
+                    </td>
+                    <td>
+                        <button class="btn btn-primary" ng-click="start(progressValues2)">Start</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum</td>
+                    <td>Lorem ipsum doler sit amet</td>
+                    <td>
+                        <div multi-step-progress steps="steps" progress-values="progressValues3"></div>
+                    </td>
+                    <td>
+                        <button class="btn btn-primary" ng-click="start(progressValues3)">Start</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum</td>
+                    <td>Lorem ipsum doler sit amet</td>
+                    <td>
+                        <div multi-step-progress steps="steps" progress-values="progressValues4"></div>
+                    </td>
+                    <td>
+                        <button class="btn btn-primary" ng-click="start(progressValues4)">Start</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </body>
 </html>

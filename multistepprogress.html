@@ -1,8 +1,7 @@
 <div class="multi-step-progress">
-    <div class="progress-strip" ng-repeat="step in steps"
-         ng-class="{'in-progress': (progressValues[$index]>0 && progressValues[$index]<100), 'done': progressValues[$index]>=100}">    <!-- in-progress/done -->
-        <div class="progress-bg" ng-style="getStyle($index)"></div>
-        <div class="progress-label">{{getLabel($index)}}</div>
-        <div class="progress-status">{{getStatus($index)}}</div>
+    <div ng-repeat="step in steps" class="msp-progress-strip " ng-class="statuses[$index]" title="{{step.waitingText}}">
+        <div class="msp-progress-bg" ng-style="getStyle($index)"></div>
+        <div class="msp-progress-label" ng-bind-html="getLabel($index) | to_trusted"></div>
+        <div class="msp-progress-status" ng-bind-html="getStatus($index) | to_trusted"></div>
     </div>
 </div>

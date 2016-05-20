@@ -1,40 +1,94 @@
-.multi-step-progress .progress-strip {
-  height: 25px;
-  background: #f2f2f2;
-  border: 1px solid #f2f2f2;
-  color: #515151;
+.multi-step-progress {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.multi-step-progress .msp-progress-strip {
+  height: 30px;
+  background: #eee;
+  border: 1px solid #eee;
+  color: #333;
   font-size: 11px;
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 auto;
+      -ms-flex: 1 auto;
+          flex: 1 auto;
+  width: 30px;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  -webkit-transition: all 0.2s ease-in;
+          transition: all 0.2s ease-in;
 }
-.multi-step-progress .progress-strip .progress-bg,
-.multi-step-progress .progress-strip .progress-status,
-.multi-step-progress .progress-strip .progress-label {
+.multi-step-progress .msp-progress-strip .msp-progress-bg,
+.multi-step-progress .msp-progress-strip .msp-progress-status,
+.multi-step-progress .msp-progress-strip .msp-progress-label {
   position: absolute;
   top: 0;
   bottom: 0;
-  line-height: 23px;
+  line-height: 28px;
+  display: none;
+  cursor: default;
 }
-.multi-step-progress .progress-strip .progress-bg {
+.multi-step-progress .msp-progress-strip .msp-progress-bg {
   left: 0;
   background: #9acc99;
+  -webkit-transition: all 0.2s ease-in;
+          transition: all 0.2s ease-in;
 }
-.multi-step-progress .progress-strip .progress-label {
+.multi-step-progress .msp-progress-strip .msp-progress-label {
   left: 8px;
 }
-.multi-step-progress .progress-strip .progress-status {
+.multi-step-progress .msp-progress-strip .msp-progress-status {
   right: 8px;
+  display: block;
 }
-.multi-step-progress .progress-strip + .progress-strip {
-  margin-top: 6px;
+.multi-step-progress .msp-progress-strip + .msp-progress-strip {
+  margin-left: 5px;
 }
-.multi-step-progress .progress-strip.in-progress {
+.multi-step-progress .msp-progress-strip.msp-in-progress,
+.multi-step-progress .msp-progress-strip.msp-done:last-child {
   background: #dff0e0;
   border-color: #dff0e0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-flex-shrink: 1;
+      -ms-flex-negative: 1;
+          flex-shrink: 1;
 }
-.multi-step-progress .progress-strip.done {
+.multi-step-progress .msp-progress-strip.msp-in-progress .msp-progress-bg,
+.multi-step-progress .msp-progress-strip.msp-done:last-child .msp-progress-bg,
+.multi-step-progress .msp-progress-strip.msp-in-progress .msp-progress-status,
+.multi-step-progress .msp-progress-strip.msp-done:last-child .msp-progress-status,
+.multi-step-progress .msp-progress-strip.msp-in-progress .msp-progress-label,
+.multi-step-progress .msp-progress-strip.msp-done:last-child .msp-progress-label {
+  display: block;
+}
+.multi-step-progress .msp-progress-strip.msp-done {
   color: #fff;
   border-color: #9acc99;
 }
-.multi-step-progress .progress-strip.done .progress-bg {
+.multi-step-progress .msp-progress-strip.msp-done .msp-progress-bg {
   background: #9acc99;
+  display: block;
 }

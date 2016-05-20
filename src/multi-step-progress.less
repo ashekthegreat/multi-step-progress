@@ -1,40 +1,70 @@
 .multi-step-progress {
-    .progress-strip {
-        height: 25px;
-        background: #f2f2f2;
-        border: 1px solid #f2f2f2;
-        color: #515151;
+    display: flex;
+    width: 100%;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    .msp-progress-strip {
+        height: 30px;
+        background: #eee;
+        border: 1px solid #eee;
+        color: #333;
         font-size: 11px;
         position: relative;
+        display: flex;
+        flex: 1 auto;
+        width: 30px;
+        flex-grow: 0;
+        flex-shrink: 0;
+        transition: all .2s ease-in;
 
-        .progress-bg, .progress-status, .progress-label {
+        .msp-progress-bg,
+        .msp-progress-status,
+        .msp-progress-label {
             position: absolute;
             top: 0;
             bottom: 0;
-            line-height: 23px;
+            line-height: 28px;
+            display: none;
+            cursor: default;
         }
-        .progress-bg {
+        .msp-progress-bg {
             left: 0;
             background: #9acc99;
+            transition: all .2s ease-in;
         }
-        .progress-label {
+        .msp-progress-label {
             left: 8px;
         }
-        .progress-status {
+        .msp-progress-status {
             right: 8px;
+            display: block;
         }
-        & + .progress-strip {
-            margin-top: 6px;
+        & + .msp-progress-strip {
+            margin-left: 5px;
         }
-        &.in-progress {
+        &.msp-waiting{
+
+        }
+        &.msp-in-progress,
+        &.msp-done:last-child{
             background: #dff0e0;
             border-color: #dff0e0;
+            flex-grow: 1;
+            flex-shrink: 1;
+
+            .msp-progress-bg,
+            .msp-progress-status,
+            .msp-progress-label {
+                display: block;
+            }
         }
-        &.done {
+        &.msp-done {
             color: #fff;
             border-color: #9acc99;
-            .progress-bg {
+            .msp-progress-bg {
                 background: #9acc99;
+                display: block;
             }
         }
     }
